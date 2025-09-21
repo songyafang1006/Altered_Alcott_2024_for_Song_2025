@@ -69,7 +69,7 @@ plot((sens.time_myr),(d13C95median),'linewidth',3,'color',c_mean)
 hold on
 plot((sens.time_myr),(d13C95quant),'linewidth',1,'color',c_range)
 
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([-25 20])
 legend('calcite','dolomite','other')
 
@@ -89,7 +89,7 @@ hold on
 semilogy(1e3*HighTime, HighCO2*1e6,'linewidth',2,'color','k')
 hold on
 semilogy(1e3*LowTime, LowCO2*1e6,'linewidth',2,'color','k')
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([10 1e7]);
 
 title('CO2')
@@ -111,7 +111,7 @@ hold on
 semilogy(AtmosO2proxtime, AtmosO2proxlow,'linewidth',2,'color','k')
 hold on
 semilogy(AtmosO2proxtime, AtmosO2proxhigh,'linewidth',2,'color','k')
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([1e-7 10])
 title('O2 atmosphere PAL')
 
@@ -121,7 +121,7 @@ box on
 semilogy((sens.time_myr),(O2DP95median/2.21e17),'linewidth',3,'color',c_mean)
 hold on
 semilogy((sens.time_myr),(O2DP95quant/2.21e17),'linewidth',1,'color',c_range)
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([1e-9 10])
 xlabel('Time (Ma)')
 ylabel('deep O2 relative')
@@ -158,7 +158,7 @@ hold on
 plot((sens.time_myr),(Dist_Preac_Burial95quant),'linewidth',1,'color',c_range)
 ylim([1e7 1e13])
 
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 title('Total P burial')
 
 %P deep
@@ -167,7 +167,7 @@ box on
 semilogy((sens.time_myr),(SRP_DP95median/2790e12),'linewidth',3,'color',c_mean)
 hold on
 semilogy((sens.time_myr),(SRP_DP95quant/2790e12),'linewidth',1,'color',c_range)
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([1e-3 5])
 title('P deep relative')
 
@@ -179,7 +179,7 @@ plot((sens.time_myr),(fanoxicdist95median),'linewidth',3,'color',c_mean)
 hold on
 plot((sens.time_myr),(fanoxicdist95quant),'linewidth',1,'color',c_range)
 title('fanoxicdist')
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
 ylim([0 1]);
 
 %Temperature
@@ -188,4 +188,4 @@ plot((sens.time_myr),(GAST95median-273),'linewidth',3,'color',c_mean)
 hold on
 plot((sens.time_myr),(GAST95quant-273),'linewidth',1,'color',c_range)
 title('GAST')
-xlim([-4e3 0]);
+xlim([-1.5e3 -0.9e3]);
