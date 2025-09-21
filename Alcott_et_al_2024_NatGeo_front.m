@@ -130,7 +130,7 @@ present.POC_DP = 5.6e16 ;
 present.O2_D = 243e12 ;
 present.O2_DP = 2.21e17 ;
 present.O2_A = 3.7e19 ;
-present.O2_S =1.6145e16 ;
+present.O2_S = 1.6145e16 ;
 present.O2_P = 4.5e12 ;
 
 %% Starting concentrations 
@@ -418,9 +418,13 @@ basfrac = 0.3 ;
         
         sensparams.CP = pars.CPoxic + rand*(1100-pars.CPoxic) ; 
         
-        sensparams.CP_1point4_oxic = 40 + rand*10 ; %%%% 40-50 
+        sensparams.CP_1point4_oxic = 21 ; % CPorg median 133 ; % CPorg 39 + rand*728 ; % CPorg 39-767 %%% CPreac median 21 ; %% CPreac real data range : 1 + rand*92 1-93, 
         
-        sensparams.CP_1point4_anoxic = 800 + rand*100 ; %%%% 800-900
+        sensparams.CP_1point4_anoxic = 138 ; % CPorg median 1387 ;  % CPorg 149 + rand*10028 ; % CPorg 149-10077 %%% median 138 ; %% CPreac 14 + rand*948 : 14-962,
+
+        sensparams.CP_1point0_oxic = 20 ; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
+        
+        sensparams.CP_1point0_anoxic = 20 ; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
 
         sensparams.EXP = 0.1 + rand* (0.75-0.1) ;
 

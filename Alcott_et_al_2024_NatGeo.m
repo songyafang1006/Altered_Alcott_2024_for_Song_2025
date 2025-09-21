@@ -56,13 +56,22 @@ EXPOSED = interp1([-4.2e9 -3e9 (-1e9*sensparams.EXPtiming) -1.7e9 -1.6e9 0],[sen
 D = interp1([-4.2e9 -3e9 -2e9 0],[12 5 2 1],t) * sensparams.D;
 
 
-if tgeol > -1450 && tgeol < -1350 
+
+if tgeol > -1425 && tgeol < -1375 
     pars.CPanoxic_prox = sensparams.CP_1point4_anoxic ;
     pars.CPanoxic_dist = sensparams.CP_1point4_anoxic ;
-    pars.CPanoxic_deep = sensparams.CP_1point4_anoxic ;
+    pars.CPanoxic_deep = sensparams.CP_1point4_oxic ; %% no recycling in deep ocean?
     pars.CPoxic_prox = sensparams.CP_1point4_oxic ;
     pars.CPoxic_dist = sensparams.CP_1point4_oxic ;
     pars.CPoxic_deep = sensparams.CP_1point4_oxic ;
+
+elseif tgeol > -1025 && tgeol < -975 
+    pars.CPanoxic_prox = sensparams.CP_1point0_anoxic ;
+    pars.CPanoxic_dist = sensparams.CP_1point0_anoxic ;
+    pars.CPanoxic_deep = sensparams.CP_1point0_oxic ; %% no recycling in deep ocean?
+    pars.CPoxic_prox = sensparams.CP_1point0_oxic ;
+    pars.CPoxic_dist = sensparams.CP_1point0_oxic ;
+    pars.CPoxic_deep = sensparams.CP_1point0_oxic ;
 else
     pars.CPanoxic_prox = sensparams.CP ;
     pars.CPanoxic_dist = sensparams.CP ;
@@ -71,8 +80,6 @@ else
     pars.CPoxic_dist = pars.CPoxic ;
     pars.CPoxic_deep = pars.CPoxic ;
 end
-
-
 
 
 U = 1 ;
