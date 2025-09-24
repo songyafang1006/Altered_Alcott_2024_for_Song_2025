@@ -418,13 +418,13 @@ basfrac = 0.3 ;
         
         sensparams.CP = pars.CPoxic + rand*(1100-pars.CPoxic) ; 
         
-        sensparams.CP_1point4_oxic = 21 ; % CPorg median 133 ; % CPorg 39 + rand*728 ; % CPorg 39-767 %%% CPreac median 21 ; %% CPreac real data range : 1 + rand*92 1-93, 
+        sensparams.CP_1point4_oxic = 2 + rand*43 ; %%% 70% data range CPreac 2-45; % CPorg median 133 ; % CPorg 39 + rand*728 ; % CPorg 39-767 %%% CPreac median 21 ; %% CPreac real data range : 1 + rand*92 1-93, 
         
-        sensparams.CP_1point4_anoxic = 138 ; % CPorg median 1387 ;  % CPorg 149 + rand*10028 ; % CPorg 149-10077 %%% median 138 ; %% CPreac 14 + rand*948 : 14-962,
+        sensparams.CP_1point4_anoxic = 63 + rand*232 ; %%% 70% data range CPreac 63-295; % CPorg median 1387 ;  % CPorg 149 + rand*10028 ; % CPorg 149-10077 %%% median 138 ; %% CPreac 14 + rand*948 : 14-962,
 
-        sensparams.CP_1point0_oxic = 20 ; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
+        sensparams.CP_1point0_oxic = 12 + rand*21 ; %%% 70% data range CPreac 12-33; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
         
-        sensparams.CP_1point0_anoxic = 20 ; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
+        sensparams.CP_1point0_anoxic = 12 + rand*21 ; %%% 70% data range CPreac 12-33; % CPorg median 117 ; % CPorg 31 + rand*286 ; % CPorg 31-317; %%% median 20 ; %% CPreac 7 + rand*88 : 7-95 
 
         sensparams.EXP = 0.1 + rand* (0.75-0.1) ;
 
